@@ -12,15 +12,11 @@ Added green unicorn production server
 ### Setup
 
 to run:
-- Clone and while in directory run command:
 - `docker compose up`
-- Open new terminal window and run:
-- `docker-compose run web python manage.py migrate`
-- `docker-compose run web python manage.py createsuperuser`
-- `docker-compose run web python manage.py runserver`
-
+- superuser will be auto set to username: dev password: dev
 test:
-- `docker-compose run web python manage.py test`
+- can send POST requests to `127.0.0.1:8000/api/token/` with `{"username": "dev", "password": "dev"}` in body
+  - this will confirm that JWT features are functioning correctly
 
 ### Resources
 

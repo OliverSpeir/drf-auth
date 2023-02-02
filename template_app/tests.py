@@ -7,8 +7,6 @@ from .models import Item
 
 
 class ItemTests(APITestCase):
-    # In Python, the @classmethod decorator is used to declare a method in the class as a class method that can be called using ClassName.MethodName()
-    # click the blue circle, this overrides a particular method
     @classmethod
     def setUpTestData(cls):
         testuser1 = get_user_model().objects.create_user(
