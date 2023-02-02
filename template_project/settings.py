@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # added to template
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -142,5 +143,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',  # changed from template
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [  # added to template
+        'rest_framework_simplejwt.authentication.JWTAuthentication',  # added to template
+        'rest_framework.authentication.BasicAuthentication',  # added to template
+        'rest_framework.authentication.SessionAuthentication',  # added to template
     ]
 }
+
+STATIC_ROOT = BASE_DIR / "staticfiles"  # added to template

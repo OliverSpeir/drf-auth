@@ -1,4 +1,4 @@
-# LAB - 32
+# LAB - 33
 
 ## Project: Lab Name
 
@@ -6,8 +6,8 @@
 
 ### Description
 
-Added permissions
-Added postgres db in docker
+Added DRF JWT
+Added green unicorn production server
 
 ### Setup
 
