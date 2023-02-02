@@ -15,8 +15,9 @@ to run:
 - `docker compose up`
 - superuser will be auto set to username: dev password: dev
 test:
-- can send POST requests to `127.0.0.1:8000/api/token/` with `{"username": "dev", "password": "dev"}` in body
-  - this will confirm that JWT features are functioning correctly
+- can send POST requests to `127.0.0.1:8000/api/token/`
+  - `{"username": "dev", "password": "dev"}` in body
+    - this will confirm that JWT features are functioning correctly
 
 ### Resources
 
