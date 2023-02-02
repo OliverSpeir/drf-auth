@@ -85,4 +85,4 @@ class ItemTests(APITestCase):
         self.client.logout()
         url = reverse("item_list")
         response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+        self.assertEqual(response.status_code, status.HTTP_401_FORBIDDEN)
