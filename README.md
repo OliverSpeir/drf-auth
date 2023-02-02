@@ -17,13 +17,12 @@ Run:
 - clone and cd into directory
 - `docker compose up`
 - superuser will be auto set to username: dev password: dev
+- /admin and /api/v1/template will render markup
 
 Test:
-- send POST requests to `127.0.0.1:8000/api/token/`
-  - `{"username": "dev", "password": "dev"}` in body
-    - this will confirm that JWT features are functioning correctly
+- While docker container is running:
+- `curl -d '{"username":"dev", "password":"dev"}' -H 'Content-Type: application/json' -X POST http://127.0.0.1:8000/api/token/`
 - `docker-compose run web python manage.py test`
-  - while docker container is running 
 ### Resources
 
 - [Django REST Framework](https://www.django-rest-framework.org/)
