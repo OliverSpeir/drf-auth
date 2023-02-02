@@ -17,7 +17,7 @@ Run:
 - clone and cd into directory
 - `docker compose up`
 - superuser will be auto set to username: dev password: dev
-- /admin and /api/v1/template will render markup
+- `/admin` and `/api/v1/template` will render markup
 
 Test:
 - While docker container is running:
