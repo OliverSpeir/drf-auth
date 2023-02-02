@@ -2,7 +2,10 @@ version: '3'
 services:
   web:
     build: .
-    command: gunicorn template_project.wsgi:application --bind 0.0.0.0:8000 --workers 4
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+             python manage.py migrate &&
+             gunicorn template_project.wsgi:application --bind 0.0.0.0:8000 --workers 4"
     volumes:
       - .:/code
     ports:
@@ -17,5 +20,3 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - /var/lib/postgresql/data
-#  volumes:
-#    db-data:
