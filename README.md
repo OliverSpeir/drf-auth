@@ -1,6 +1,6 @@
 # LAB - 33
 
-## Project: Lab Name
+## Project: DRF Auth
 
 ### Author: Oliver Speir
 
